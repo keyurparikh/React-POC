@@ -28,7 +28,7 @@ jobs:
           CF_API: ${{ secrets.CF_API }}
           CF_ORG: ${{ secrets.CF_ORG }}
           CF_SPACE: ${{ secrets.CF_SPACE }}
-          CF_USERNAME: ${{ secrets.CF_USER }}
+          CF_USERNAME: ${{ secrets.CF_USERNAME }}
           CF_PASSWORD: ${{ secrets.CF_PASSWORD }}
         with:
           args: push --strategy rolling -f manifest.yml
