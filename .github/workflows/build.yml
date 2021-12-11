@@ -20,7 +20,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
         name: Prepare NPM CI
-      - run: CI='' npm run dev --if-present
+      - run: CI='' npm run build-prod --if-present
         name: Build React App
       - uses: alphagov/paas-cf-github-action@main
         name: Deploy to Cloud Foundry
