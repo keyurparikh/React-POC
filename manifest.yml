@@ -1,6 +1,6 @@
 ---
 applications:
-  - name: react-poc
+  - name: react-poc-feedback
     command: node dist/server.js
     instances: 1
     memory: 256M

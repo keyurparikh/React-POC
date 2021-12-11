@@ -1,9 +1,9 @@
 name: MOD Standards Frontpage Pipeline
 on:
   push:
-    branches: [master]
+    branches: [feedback]
   pull_request:
-    branches: [master]
+    branches: [feedback]
 
 jobs:
   build:
