@@ -22,8 +22,6 @@ jobs:
         name: Prepare NPM CI
       - run: CI='' npm run dev --if-present
         name: Build React App
-      - run: npm install nodemon -g
-        name: install nodemon
       - uses: alphagov/paas-cf-github-action@main
         name: Deploy to Cloud Foundry
         env:
