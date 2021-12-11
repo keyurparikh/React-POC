@@ -1,7 +1,7 @@
 ---
 applications:
   - name: react-poc
-    command: node dist/server.js
+    command: nodemon dist/server.js
     instances: 1
     memory: 256M
     buildpacks:
