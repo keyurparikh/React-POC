@@ -16,6 +16,10 @@ app.use(
 // Serve the React static files after build
 app.use(express.static(buildDir));
 
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(buildDir, "index.html"));
+});
+
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });
@@ -23,3 +27,6 @@ app.listen(PORT, () => {
 app.get("/api/hello", (req, res) => {
   res.send({ message: "Hello" });
 });
+
+
+
