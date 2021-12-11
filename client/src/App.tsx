@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import "./App.css";
 import axios from "axios";
 
 function App() {
+  useEffect(() => {
+    const sayHello = async () => {
+      const response = await fetch("/api/hello");
+      const body = await response.json();
+      console.log(body);
+    };
+    sayHello();
+  }, []);
+
   const submitConsent = async (e: React.MouseEvent) => {
     e.preventDefault();
     const response = await axios({

@@ -1,8 +1,8 @@
 ---
 applications:
   - name: react-poc
-    path: build/
+    path: dist/
     instances: 1
     memory: 256M
     buildpacks:
-      - staticfile_buildpack
+      - nodejs-buildpack
